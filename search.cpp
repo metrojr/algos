@@ -66,4 +66,17 @@ int main()
    cout<<endl<<"Program \"search it\" is now finished."<<endl<<endl;
 
     return 0;
+
+}
+
+int linearSearch(auto data,auto key)
+{
+for(int i=0;i<data.size();i++)
+{
+if(data[i]==key)
+{
+return i;
+}
+}
+return -1;
 }
