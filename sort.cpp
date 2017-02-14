@@ -12,14 +12,13 @@ using namespace std;
 \param [in] data The data set that will be searched
 \returns location of key if found or -1 if not found
 */
-void selectionSort(auto&data);//prototype
+void bubbleSort(auto&data);//prototype
 
 
 int main()
 {
   vector<string> inputs;
-  string search_key, input;
-  int result;
+  string input;
 
    cout<<"Welcome to \"search it\". We first need some input data."<<endl;
    cout<<"We'll assume the inputs do not have any spaces."<<endl<<endl;
@@ -40,26 +39,25 @@ int main()
       cout<<endl<<"No input received, quiting..."<<endl<<endl;
        exit(1);//nothing to do but quit program
   }
- 
-   cout<<endl<<"To end input type the #-character (followed by Enter)"<<endl<<endl;
-
-        selectionSort(inputs);
+for(int k=0;k<inputs.size();k++)
+{
+        bubbleSort(inputs);
+ cout<<inputs[k]<<endl;
+}
     return 0;
 
 }
 
-void selectionSort(auto&data)
+void bubbleSort(auto&data)
 {
-for(int i=0;i<data.size();i++)
+for(int i=0;i<data.size()-1;i++)
 {
-int min=i;
-for(int j=i+1;j<data.size();j++)
+for(int j=0;j<data.size()-1;j++)
 {
-if(data[j]<data[min])
+if(data[j]>data[j+1])
 {
-min=j;
+swap(data[j],data[j+1]);
 }
-swap(data[i],data[min]);
 }
 }
 }
