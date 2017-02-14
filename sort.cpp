@@ -42,29 +42,8 @@ int main()
   }
  
    cout<<endl<<"To end input type the #-character (followed by Enter)"<<endl<<endl;
-  cout<<"Enter a value to search for: ";
 
-
-   cin>>search_key;
- 
-    while(search_key != "#")//perform searches until sentinel entered
-    {
-        result = linearSearch(inputs,search_key);
-
-        cout<<"  '"<<search_key<<"' was ";
-
-        if (result == -1)
-          cout<<"not found";
-        else
-          cout<<"found at index "<<result;
-
-
-        cout<<endl<<endl<<"Enter a value to search for: ";
-        cin>>search_key; 
-    }
-
-   cout<<endl<<"Program \"search it\" is now finished."<<endl<<endl;
-
+        selectionSort(inputs);
     return 0;
 
 }
