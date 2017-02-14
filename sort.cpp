@@ -12,7 +12,7 @@ using namespace std;
 \param [in] data The data set that will be searched
 \returns location of key if found or -1 if not found
 */
-int selectionSort(auto data, auto key);//prototype
+int linearSearch(auto data, auto key);//prototype
 
 
 int main()
@@ -69,7 +69,7 @@ int main()
 
 }
 
-int selectionSort(auto & data)
+void selectionSort(auto&data)
 {
 for(int i=0;i<data.size();i++)
 {
@@ -80,8 +80,7 @@ if(data[j]<data[min])
 {
 min=j;
 }
-}
 swap(data[i],data[min]);
 }
 }
-
+}
